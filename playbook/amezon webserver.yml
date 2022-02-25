@@ -6,8 +6,10 @@
     yum:
      name: httpd
      state: present
+    when: ansible_os_family == "RedHat"
 
   - name: start apache2 service
     service:
      name: httpd
      state: started
+    when: ansible_os_family == "RedHat"
