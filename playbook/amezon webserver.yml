@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install httpd  web server into amezon linx server
+    yum:
+     name: httpd
+     state: present
+
+  - name: start apache2 service
+    service:
+     name: httpd
+     state: started
