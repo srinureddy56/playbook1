@@ -4,12 +4,12 @@
   tasks:
   - name: install jdk8 in ubuntu20 node1
     apt: 
-     name: "{{ myjavaonubuntuos }}"
+     name: "{{ myjavaonubuntu }}"
      state: present
     when: ansible_os_family == "Debian"
   
   - name: install jdk8 on amezonlinux node2
     yum:
-     name: "{{ myjavaonamezonos }}"
+     name: "{{ myjavaonamezon }}"
      state: present
     when: ansible_os_family == "RedHat"
