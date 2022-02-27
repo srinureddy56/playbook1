@@ -1,5 +1,5 @@
 ---
-- hosts: amazon
+- hosts: ubuntu
   become: yes
   tasks:
   - name: install git 
@@ -9,8 +9,8 @@
     igonre_errors: yes
 
   - name: install wget
-    apt:
-     yum: wget
+    yum:
+     name: wget
      state: present 
     igonre_errors: yes
 
