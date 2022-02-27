@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   tasks:
-  - name: install jdk8 in ubuntu20 node1
+  - name: install jdk8 in ubuntu node1
     apt: 
      name: "{{ myjavaonubuntu }}"
      state: present
@@ -10,6 +10,6 @@
   
   - name: install jdk8 on amezonlinux node2
     yum:
-     name: "{{ myjavaonamezon }}"
+     name: "{{ myjavaonamazon }}"
      state: present
     when: ansible_os_family == "RedHat"
