@@ -1,0 +1,20 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+  - name: install apache2 on ubuntu20
+    apt:
+     name: apache2
+     state: present
+    notify: startwebserver
+
+  - name: i want to copy index file into all nodes
+    template:
+     src: jinja2.j2
+     dest: /var/www/html/index.html
+
+  handlers: 
+  - name: startwebserver 
+    service:
+     name: apache2
+     state: restarted
