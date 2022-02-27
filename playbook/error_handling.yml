@@ -1,0 +1,21 @@
+---
+- hosts: amazon
+  become: yes
+  tasks:
+  - name: install git 
+    yum:
+     namee: git
+     state: present
+    igonre_errors: yes
+
+  - name: install wget
+    apt:
+     yum: wget
+     state: present 
+    igonre_errors: yes
+
+  - name: insta tree
+    yum:
+     name: tree
+     state: present
+    igonre_errors: yes
