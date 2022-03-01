@@ -2,10 +2,10 @@
 # handlers file for mytomcatrole
 - name: starttomcat
   service:
-   name: tomcat 
-   state: started
+   name:  tomcat 
+   state:  started
 
 - name: restarttomcat
   service:
-   name: tomcat
-   state: restarted 
+   name:  tomcat
+   state:  restarted 
